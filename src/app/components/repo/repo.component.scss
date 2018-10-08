@@ -1,0 +1,46 @@
+:host {
+  display: block;
+  margin: 16px 0;
+}
+
+.repo-card {
+  display: flex;
+  flex-wrap: no-wrap;
+  justify-content: space-between;
+
+  .repo-author-wrapper {
+    width: 140px;
+  }
+
+  .author-box {
+    img {
+      width: 100%;
+    }
+    h3 {
+      color: #949494;
+    }
+  }
+
+  .repo-repo-wrapper {
+    flex-grow: 1;
+    margin-left: 40px;
+  }
+
+  .star-box {
+    display: flex;
+    align-items: center;
+    color: #949494;
+
+    span {
+      margin: 0 6px;
+      color: black;
+    }
+  }
+
+  .repo-title {
+    a {
+      color: black;
+      text-decoration: none;
+    }
+  }
+}

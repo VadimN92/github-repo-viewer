@@ -1,0 +1,66 @@
+.form-wrapper {
+  padding: 40px 0;
+}
+
+.form-inputs {
+  display: flex;
+  .form-row {
+    margin-right: 8px;
+    flex-grow: 1;
+
+    &:last-child {
+      margin-right: 0;
+     }
+  }
+}
+
+.form-btn-wrapper {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.no-result {
+  font-size: 22px;
+  padding: 10px 0;
+}
+
+.list-repos {
+  height: 100%;
+}
+
+
+.loading {
+  position: relative;
+  width: 100px;
+  height: 50px;
+  margin: 0 auto;
+}
+
+.loading:after {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: transparent;
+  display: block;
+  top: 50%;
+  left: 50%;
+  margin: -5px 0 0 -25px;
+  content: '';
+  border-radius: 50%;
+  animation : loading 1.5s infinite linear;
+}
+
+@keyframes loading {
+  0%   {box-shadow: 60px 0 0 0 #ddd, 20px 0 0 0 #ddd, -20px 0 0 0 #ddd;}
+  5%   {box-shadow: 60px 0 0 0 #ddd, 20px 0 0 0 #ddd, -20px 0 0 2px #ddd;}
+  15%   {box-shadow: 60px 0 0 0 #ddd, 20px 0 0 0 #ddd, -20px 0 0 8px #ddd;}
+  20%   {box-shadow: 60px 0 0 0 #ddd, 20px 0 0 2px #ddd, -20px 0 0 10px #ddd;}
+  25%   {box-shadow: 60px 0 0 0 #ddd, 20px 0 0 8px #ddd, -20px 0 0 5px #ddd;}
+  30%   {box-shadow: 60px 0 0 2px #ddd, 20px 0 0 10px #ddd, -20px 0 0 2px #ddd;}
+  35%   {box-shadow: 60px 0 0 8px #ddd, 20px 0 0 5px #ddd, -20px 0 0 0 #ddd;}
+  40%   {box-shadow: 60px 0 0 10px #ddd, 20px 0 0 2px #ddd, -20px 0 0 0 #ddd;}
+  45%   {box-shadow: 60px 0 0 5px #ddd, 20px 0 0 0 #ddd, -20px 0 0 0 #ddd;}
+  50%   {box-shadow: 60px 0 0 2px #ddd, 20px 0 0 0 #ddd, -20px 0 0 0 #ddd;}
+  65%   {box-shadow: 60px 0 0 0 #ddd, 20px 0 0 0 #ddd, -20px 0 0 0 #ddd;}
+  100%  {box-shadow: 60px 0 0 0 #ddd, 20px 0 0 0 #ddd, -20px 0 0 0 #ddd;}
+}

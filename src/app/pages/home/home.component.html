@@ -1,0 +1,41 @@
+<div class="container">
+  <form [formGroup]="searchForm" (ngSubmit)="onSubmit()" class="form-wrapper">
+    <div class="form-inputs">
+        <mat-form-field class="form-row">
+            <mat-select placeholder="Language" formControlName="language">
+                <mat-option *ngFor="let language of languages" [value]="language.value">
+                  {{language['label']}}
+                </mat-option>
+              </mat-select>
+        </mat-form-field>
+
+        <mat-form-field class="form-row">
+            <mat-select placeholder="Order by" formControlName="order">
+                <mat-option *ngFor="let order of orders" [value]="order.value">
+                  {{order['label']}}
+                </mat-option>
+              </mat-select>
+        </mat-form-field>
+
+        <mat-form-field class="form-row">
+            <input matInput placeholder="Search repo ..." formControlName="query">
+        </mat-form-field>
+    </div>
+
+    <div class="form-btn-wrapper">
+        <button mat-raised-button color="primary" type="submit">Search</button>
+    </div>
+
+  </form>
+
+  <div>{{totalCount}} results</div>
+
+  <div class="list-repos">
+      <div class="no-result" *ngIf="!repos.length && !loaded">
+        No items to display
+      </div>
+      <app-repo *ngFor="let repo of repos" [repo]="repo"></app-repo>
+
+      <div *ngIf="!loaded" class="loading">
+  </div>
+</div>
